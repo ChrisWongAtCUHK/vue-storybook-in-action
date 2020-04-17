@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import vueDebounce from 'vue-debounce'
+import TrendingRepoStory from './1-VueDebounce/TrendingRepo.story.vue'
 
 Vue.use(vueDebounce)
 
@@ -22,6 +23,7 @@ export const OfficialExample = () => ({
   }
 })
 
+// loading message
 export const DebounceSearchInput = () => ({
   template: `
   <div>
@@ -49,5 +51,12 @@ export const DebounceSearchInput = () => ({
       this.message = val
       this.typing = null
     }
+  }
+})
+
+export const TrendingRepo = () => ({
+  components: { TrendingRepoStory },
+  render(h) {
+    return <TrendingRepoStory />
   }
 })
