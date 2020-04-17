@@ -21,3 +21,33 @@ export const OfficialExample = () => ({
     }
   }
 })
+
+export const DebounceSearchInput = () => ({
+  template: `
+  <div>
+    <input
+      v-debounce:400ms="debounceSearch"
+      type="text"
+      placeholder="Search"
+      @input="type"
+    >
+    <span v-if="typing">You are typing</span>
+    <span v-if="message">You typed: {{ message }}</span>
+  </div>
+  `,
+  data: () => ({
+    message: null,
+    typing: null,
+    debounce: null
+  }),
+  methods: {
+    type() {
+      this.message = null
+      this.typing = 'You are typing'
+    },
+    debounceSearch(val) {
+      this.message = val
+      this.typing = null
+    }
+  }
+})

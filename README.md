@@ -7,4 +7,5 @@ npm run storybook
 ```
 
 ## vue-debounce
-https://github.com/dhershman1/vue-debounce#readme
+* [vue-debounce](https://github.com/dhershman1/vue-debounce#readme)
+* [Vue.js Debounce search input](https://codesandbox.io/s/n9lrp9mx2p?file=/src/App.vue:363-419)
